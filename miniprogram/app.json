@@ -1,13 +1,12 @@
 {
   "plugins": {
-  
     "WechatSI": {
-      "version": "0.0.7",
+      "version": "0.3.4",
       "provider": "wx069ba97219f66d99"
-        }
+    }
   },
   "pages": [
-    "pages/test",
+    "pages/book/book",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -20,8 +19,19 @@
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
-    "pages/im/room/room"
-  
+    "pages/im/room/room",
+    "pages/weather/weather",
+    "pages/news/news",
+    "pages/webpage/web"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -29,6 +39,26 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "那棵树",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#35495e",
+    "borderStyle": "white",
+    "backgroundColor": "#f9f9f9",
+    "list": [
+      {
+        "text": "读书",
+        "pagePath": "pages/book/book"
+      },
+      {
+        "text": "新闻",
+        "pagePath": "pages/news/news"
+      },
+      {
+        "text": "天气",
+        "pagePath": "pages/weather/weather"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"
