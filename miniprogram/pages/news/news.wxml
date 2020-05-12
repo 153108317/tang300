@@ -1,0 +1,12 @@
+<!--miniprogram/pages/news/news.wxml-->
+<block wx:key="item" wx:for="{{T1348649580692}}">
+<navigator url="/pages/webpage/web?url={{item.url}}">
+<view class="content"><text>
+{{item.ltitle}}
+</text></view>
+<image mode="scaleToFill" src="{{item.imgsrc}}"></image>
+<view class="content"><text>{{item.digest}}</text></view>
+</navigator>
+</block>
+
+

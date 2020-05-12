@@ -1,0 +1,67 @@
+/* miniprogram/pages/test.wxss */
+.title{
+  width: 100%;
+  align-items: center;
+  padding: 15rpx;
+  text-align: center;
+  background-color: white;
+  font-size: 44rpx;
+  color: black;
+font-weight: bolder;
+}
+.stitle{
+  font-size: 38rpx;
+padding: 15rpx;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(162, 119, 119);
+  color: black;
+font-weight: bold;
+}
+.content{
+  display: flex;
+  width: 100%;
+  font-size: 36rpx;
+  align-items: center;
+  padding-right: 15rpx;
+  padding-top: 35rpx;
+  justify-content: center;
+  background-color: white;
+  color: rgb(101, 100, 199);
+}
+.autor{
+  width: 100%;
+  padding-right: 30rpx;
+  padding-bottom: 30rpx;
+  padding-top: 15rpx;
+  color: rgb(178, 182, 178);
+  font-size: 28rpx;
+  background-color: white;
+  box-sizing:border-box;
+  text-align: right;
+}
+.item{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  padding-bottom: 20rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+}
+.block{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  background-color: white;
+  margin:auto;
+ 
+  
+}
+.line{
+  height: 20rpx;
+  width: 100%;
+}
