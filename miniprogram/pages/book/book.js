@@ -1,16 +1,24 @@
-// miniprogram/pages/test.js
-var tang300=require('../../data/json.js');
-var plugin = requirePlugin("WechatSI");
-const innerAudioContext = wx.createInnerAudioContext();
-innerAudioContext.autoplay = true;
+// miniprogram/pages/book/book.js
+var app=getApp();   
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
-    title:"唐诗300首"
-
+  data: { 
+    listData:[
+      {'id':0,'name':'诗经'},
+      {'id':1,'name':'唐诗'},
+      {'id':2,'name':'弟子规'},
+      {'id':3,'name':'三字经'},
+      {'id':4,'name':'增广贤文'},
+      {'id':5,'name':'论语'},
+      {'id':6,'name':'孟子'},
+      {'id':7,'name':'中庸'},
+      {'id':8,'name':'唐诗'}
+    
+    ],
+  //  index:0
   },
 
   /**
@@ -18,12 +26,51 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '读书',
+      title: options.title||'读书',
     })
-    this.setData({
-      dataList:tang300.dataList
-    });
 
+  },
+  animationed:function(){
+    // wx.navigateTo({
+    //   url: '../../tangshi/tangshi',
+    // })
+
+  },
+  getInfo:function(){
+    console.log('xxxxxxxxxxxxxxxxxxxxxx')
+      // 获取用户信息
+      wx.getSetting({
+        success: res => {
+          console.log(res)
+          if (res.authSetting['scope.userInfo']) {
+            // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+            wx.getUserInfo({
+              success: res => {
+                console.log(res.userInfo)
+                // this.setData({
+                //   avatarUrl: res.userInfo.avatarUrl,
+                //   getApp().globalData.userInfo: res.userInfo
+
+                // })
+              }
+            })
+          }
+        },
+        fail:res=>{
+          console.log(res)
+        }
+      })
+  },
+  start:function(event){
+    var url;
+ 
+    url='../book/tangshi/tangshi'+"?title="+event.currentTarget.dataset.name;
+
+     wx.navigateTo({
+      url:url|| '../book/tangshi/tangshi?title=唐诗',
+    })
+
+      
   },
 
   /**
@@ -37,6 +84,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+  //  this. getInfo();
+  //  wx.getUserInfo({
+  //   success: res => {
+  //     console.log(res.userInfo)
+  //     // this.setData({
+  //     //   avatarUrl: res.userInfo.avatarUrl,
+  //     //   getApp().globalData.userInfo: res.userInfo
+
+  //     // })
+  //   }
+  // })
 
   },
 
@@ -73,25 +131,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  onspeek:function( event){
-    plugin.textToSpeech({
-      lang: "zh_CN",
-      tts: true,
-      content: event.currentTarget.dataset.s,
-      success: function(res) {
-          console.log("succ tts", res.filename)   
-          innerAudioContext.onReady
-          innerAudioContext.src =res.filename
-          innerAudioContext.onPlay(() => {
-            console.log('开始播放')
-          })
-      },
-      fail: function(res) {
-          console.log("fail tts", res)
-      }
-  });
-
   }
-
 })

@@ -1,0 +1,32 @@
+/* miniprogram/pages/game/game.wxss */
+.father{
+  height: 100%;
+  width: 10000rpx;
+  background: repeating-linear-gradient(green,blue,white);
+}
+.enemy{
+  width: 30rpx;
+  height: 30rpx;
+  background: black;
+  position: absolute;
+}
+
+.enemy1{
+  width: 30rpx;
+  height: 30rpx;
+  background: rgb(150, 43, 43);
+  position: absolute;
+}
+.view{
+  position: absolute;
+  background: green;
+}
+.display_horizontal{
+  width: 100%;
+  padding: 20rpx ;
+  background: khaki;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+}

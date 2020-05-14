@@ -4,7 +4,7 @@
 <view class="content"><text>
 {{item.ltitle}}
 </text></view>
-<image mode="scaleToFill" src="{{item.imgsrc}}"></image>
+<image class="content" mode="scaleToFill" src="{{item.imgsrc}}"></image>
 <view class="content"><text>{{item.digest}}</text></view>
 </navigator>
 </block>

@@ -15,6 +15,21 @@ App({
       })
     }
 
-    this.globalData = {}
+    this.globalData = {
+      listData:[
+        {'id':0,'name':'诗经'},
+        {'id':1,'name':'唐诗'},
+        {'id':2,'name':'弟子规'},
+        {'id':3,'name':'唐诗'},
+        {'id':4,'name':'唐诗'},
+        {'id':5,'name':'唐诗'},
+        {'id':6,'name':'唐诗'},
+        {'id':7,'name':'唐诗'},
+        {'id':8,'name':'唐诗'}
+      
+      ],
+      userInfo: {},
+
+    }
   }
 })

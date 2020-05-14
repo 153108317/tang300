@@ -1,14 +1,11 @@
-<!--miniprogram/pages/test.wxml-->
-<text id="title" class="title">{{title}}</text>
-<block class="block"
-wx:key="item" wx:for="{{dataList}}">
-
-<text class="stitle">{{item.id}}.《{{item.title}}》</text>
-<text class="content"
- bindtap="onspeek"
-data-s="{{item.title}}{{item.contents}}作者：{{item.author}}"
-
->{{item.contents}}</text>
-<text class="autor">作者：{{item.author}}</text>
-<view class="item"></view>
+<!--miniprogram/pages/book/book.wxml-->
+<view class="gridview">
+<block  wx:key="item" wx:for="{{listData}}" wx:for-index="index">
+<view class="gridview-item" animation="{{ani}}" bindtap="start"
+data-name="{{item.name}}"
+bindtransitionend='animationed' >
+<text class="text">{{item.name}}</text>
+</view>
 </block>
+
+</view>

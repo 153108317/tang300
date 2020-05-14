@@ -7,6 +7,7 @@
   },
   "pages": [
     "pages/book/book",
+    "pages/book/tangshi/tangshi",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -22,7 +23,8 @@
     "pages/im/room/room",
     "pages/weather/weather",
     "pages/news/news",
-    "pages/webpage/web"
+    "pages/webpage/web",
+    "pages/game/game"
   ],
   "permission": {
     "scope.userLocation": {
@@ -54,6 +56,9 @@
         "text": "新闻",
         "pagePath": "pages/news/news"
       },
+      
+    
+      
       {
         "text": "天气",
         "pagePath": "pages/weather/weather"

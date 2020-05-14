@@ -1,0 +1,15 @@
+<!--miniprogram/pages/game/game.wxml-->
+<text>miniprogram/pages/game/game.wxml</text>
+<view class='father'>
+<view class='enemy' style='right:{{rights}}rpx;top:{{etop}}rpx;'/>
+<view class='enemy1' style='right:{{rights2}}rpx;top:{{e2top}}rpx;'/>
+<view class='enemy' style='right:{{rights3}}rpx;top:{{e3top}}rpx;'/>
+<view class='view' style='top:{{tops}}rpx' >
+"飞呀飞"
+</view>
+<view class='display_horizontal' >
+<button bindtap="down">下</button><button bindtap="up">上</button>
+</view>
+
+
+</view>
