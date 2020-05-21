@@ -15,7 +15,8 @@ Page({
       {'id':5,'name':'论语'},
       {'id':6,'name':'孟子'},
       {'id':7,'name':'中庸'},
-      {'id':8,'name':'唐诗'}
+      {'id':8,'name':'花间集'},
+      {'id':9,'name':'再别康桥'}
     
     ],
   //  index:0
@@ -37,7 +38,6 @@ Page({
 
   },
   getInfo:function(){
-    console.log('xxxxxxxxxxxxxxxxxxxxxx')
       // 获取用户信息
       wx.getSetting({
         success: res => {

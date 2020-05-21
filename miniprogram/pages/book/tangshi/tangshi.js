@@ -47,6 +47,14 @@ Page({
         case '中庸':
           tang300=require('../../../data/zhongyong.js');
         break
+                 
+        case '花间集':
+          tang300=require('../../../data/huajianji.js');
+        break
+                    
+        case '再别康桥':
+          tang300=require('../../../data/zaibiekangqiao.js');
+        break
           default:
             break
     }

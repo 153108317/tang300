@@ -52,11 +52,7 @@
         "text": "读书",
         "pagePath": "pages/book/book"
       },
-      {
-        "text": "新闻",
-        "pagePath": "pages/news/news"
-      },
-      
+    
     
       
       {
